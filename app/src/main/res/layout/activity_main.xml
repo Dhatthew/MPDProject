@@ -1,0 +1,70 @@
+<!-- MPD XML Starter code Semester B Session 2020 2021 -->
+    <!--Matthew Johnston S1824385-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/searchTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Search Roadworks:"
+            android:textSize="32dp" />
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="text"
+            android:text=""
+            android:textSize="32dp"
+            android:ems="4" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="pick_date"
+            android:onClick="showDatePickerDialog"
+            android:id="@+id/showPicker"/>
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="See Incidents"/>
+
+        <Button
+            android:id="@+id/worksButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="See Current Roadworks"/>
+
+        <Button
+            android:id="@+id/plannedButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="See Planned Roadworks"/>
+
+        <ListView
+            android:layout_alignParentTop="true"
+            android:id="@+id/TrafficList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="3dp" />
+
+        <TextView
+            android:id="@+id/tv_emptyTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="No Results"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+</ScrollView>

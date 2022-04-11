@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Matthew Johnston S1824385-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:id="@+id/descriptionTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_below="@id/showButton"
+        />
+
+    <TextView
+        android:id="@+id/periodTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_below="@id/descriptionTxt"
+        />
+
+    <Button
+        android:id="@+id/showButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="View"
+        android:layout_below="@id/titleTxt"/>
+
+    <View android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Orange"
+        android:id="@+id/Orange"
+        android:layout_toRightOf="@id/Green" />/>
+
+    <View android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Chartreuse"
+        android:id="@+id/Green"
+        android:layout_below="@id/periodTxt" />/>
+
+    <View android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/IndianRed"
+        android:id="@+id/Red"
+        android:layout_toRightOf="@id/Orange" />/>
+
+
+</RelativeLayout>
