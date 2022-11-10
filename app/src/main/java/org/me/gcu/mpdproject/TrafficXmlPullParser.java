@@ -66,14 +66,14 @@ public class TrafficXmlPullParser {
 
                     case XmlPullParser.END_TAG:
                         if (tagname.equalsIgnoreCase(KEY_ITEM)) {
-                            // if <item> then we are done with current item
+                            // if </item> then we are done with current item
                             // add it to the list.
                             stackTraffic.add(curStackTraffic);
                         } else if (tagname.equalsIgnoreCase(KEY_TITLE)) {
                             // if </name> use setName() on curTraffic
                             curStackTraffic.setTitle(curText);
                         } else if (tagname.equalsIgnoreCase(KEY_DESCRIPTION)) {
-                            // if </name> use setName() on curTraffic
+                            // if </description> stitch and use setDescription() and setDates() on curTraffic
                             String[] arr = curText.split("<br />");
                             StringBuilder stitch = new StringBuilder();
                             for (String s: arr) {
